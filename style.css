@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Convergence-Regular";
+  src: url(/fonts/Convergence-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url(/fonts/FiraSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url(/fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FiraSans-SemiBold";
+  src: url(/fonts/FiraSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "FiraSans-Thin";
+  src: url(/fonts/FiraSans-Thin.ttf);
+}
+
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #3c87ff;
+}
+
+.container {
+  margin: 3rem 0;
+  padding: 0.5rem;
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: "FiraSans-SemiBold", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.container {
+  max-width: 50rem;
+  background: #fff;
+  border-radius: 0.35rem;
+  padding: 1rem;
+}
+
+.container .add-task {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container .add-task .form {
+  position: relative;
+  width: 85%;
+  height: 3rem;
+}
+
+.container .add-task .form .add-task {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 1rem;
+  border: 1px solid #999;
+  color: #666666;
+  background: none;
+  border-radius: 0.5rem;
+  font-family: "Convergence-Regular", sans-serif;
+  font-size: 1.3rem;
+}
+
+.container .add-task .form .add-task:focus {
+  border: 1px solid #3c87ff;
+}
+
+.container .add-task .form .label {
+  position: absolute;
+  font-family: "Convergence-Regular", sans-serif;
+  font-size: 1.2rem;
+  color: #bfbfbf;
+  top: 0.8rem;
+  left: 0;
+  transition: 0.1s ease-in-out;
+  cursor: text;
+  padding: 0 1rem;
+  transition: top 200ms ease-in left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.container .add-task .form .add-task:focus ~ .label,
+.add-task:not(:placeholder-shown).add-task:not(:focus) ~ .label {
+  top: -0.5rem;
+  left: 0.7rem;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #3c87ff;
+}
+
+/* Button */
+.container .add-task .add {
+  font-family: "Convergence-Regular", sans-serif;
+  outline: none;
+  border: none;
+  background-color: #3c87ff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  width: 13%;
+  transition: 0.2s ease;
+}
+
+.container .add-task .add:hover {
+  background-color: #5093ff;
+}
+/* Task Box */
+
+.container .controls {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.container .controls .filters {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .controls .filters span,
+.empy {
+  padding: 1rem;
+  cursor: pointer;
+  color: #888888;
+  font-family: "Convergence-Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+}
+
+.container .controls .filters span:hover {
+  background-color: #ececec;
+}
+
+.active {
+  transition: 0.1s step-end;
+  border-bottom: 3px solid #3c87ff;
+  color: #0e86d4 !important;
+}
+
+/* Task Box */
+
+.container .task-box {
+  margin: 25px 5px;
+}
+
+.container .task-box .task {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #f4f6f7;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+}
+.container .task-box .task label {
+  display: flex;
+  align-items: center;
+  max-width: 30rem;
+  min-width: 10rem;
+}
+
+.container .task-box .task label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.container .task-box .task label p {
+  font-size: 1.1rem;
+  font-family: "Convergence-Regular", sans-serif;
+  color: #1f1f1f;
+  letter-spacing: 0.3px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.container .task-box .task label p.checked {
+  text-decoration: line-through;
+}
+
+.container .task-box .task .settings {
+  display: flex;
+  align-items: center;
+}
+
+.container .task-box .task .settings img {
+  cursor: pointer;
+  width: 17px;
+}
+.container .task-box .task .settings img:last-child {
+  margin-left: 10px;
+}

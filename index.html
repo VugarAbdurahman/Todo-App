@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>My Todo List</h1>
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Add New Task -->
+      <div class="add-task">
+        <div class="form">
+          <input placeholder=" " type="text" id="add-taks" class="add-task" />
+          <label class="label" for="add-taks">New task...</label>
+        </div>
+        <button class="add">ADD</button>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <span id="all" class="active">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+      </div>
+
+      <!-- Todo Lists Content-->
+      <ul class="task-box"></ul>
+    </div>
+
+    <!-- scripts -->
+    <script src="/script.js"></script>
+  </body>
+</html>
